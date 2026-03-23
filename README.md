@@ -122,8 +122,3 @@ console.log(ast);
 ] 
 */
 ```
-
-## 📄 License
-
-MIT © [ovelwe](https://github.com/ovelwe)
-```
