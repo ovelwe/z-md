@@ -1,0 +1,55 @@
+{
+  "name": "@ovelwe/z-md",
+  "version": "1.0.2",
+  "description": "Simple markdown parser and renderer by ovelwe",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rollup -c && cp src/styles.css dist/styles.css",
+    "dev": "rollup -c -w",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "markdown",
+    "parser",
+    "renderer",
+    "html",
+    "react",
+    "z-md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ovelwe/z-md.git"
+  },
+  "license": "MIT",
+  "author": "Danil Zobkov",
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/react": "^19.0.0",
+    "rollup": "^4.0.0",
+    "rollup-plugin-dts": "^6.0.0",
+    "tslib": "^2.6.0",
+    "typescript": "^5.0.0"
+  }
+}
